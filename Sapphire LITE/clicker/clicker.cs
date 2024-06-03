@@ -51,10 +51,10 @@ namespace Sapphire_LITE.clicker {
                 if (minecraft_process.ToString() != DLLImports.GetForegroundWindow().ToString()) continue;
 
                 // disable when cursor is detected but still allow quick refilling
-                if (smart_mode & IsCursorVisisble() && !KeyListener.isKeyPressed(Keys.LShiftKey)) continue;
+                if (smart_mode & IsCursorVisisble() && !KeyListener.isKeyPressed(Keys.LControlKey)) continue;
 
                 // shift disable condition
-                if (shift_disable && KeyListener.isKeyPressed(Keys.LShiftKey)) continue;
+                if (shift_disable && KeyListener.isKeyPressed(Keys.LControlKey)) continue;
 
                 // always on condition
                 if (always_on) {
